@@ -5,6 +5,7 @@ Project Overview:
 This project uses a microcontroller that detects objects while the system scans between 15-165degrees once it detects the presence of an object the machine stops, measures the distance and alerts to remove the object on an LCD screen
 
 Key Feature:
+
 Real-Time detection: Continously monitors the area using sensors
 
 Alerting system: A Visual message on the LCD 
