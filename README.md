@@ -48,18 +48,6 @@ https://github.com/user-attachments/assets/d8ce2b78-300a-41b7-8098-e8868047e46a
 <img width="917" height="572" alt="image" src="https://github.com/user-attachments/assets/d7112d4d-9116-431b-bf4a-accbc07a43d3" />
 
 
-### Hardware Pin Matrix
-To replicate or modify this project, connect the components to your microcontroller board according to the mapping matrix below:
-
-| Component | Component Pin | Arduino Uno Pin | Notes |
-| :--- | :--- | :--- | :--- |
-| HC-SR04 Sensor | VCC | 5V | Power supply |
-| HC-SR04 Sensor | GND | GND | Ground reference |
-| HC-SR04 Sensor | Trig | Pin 9 | Output trigger pulse |
-| HC-SR04 Sensor | Echo | Pin 10 | Input echo pulse |
-| SG90 Servo | PWM / Signal | Pin 11 | Motor position control |
-| SG90 Servo | Power | 5V | External 5V source recommended |
-| Potentiometer | Wiper (Middle) | LCD VO / Pin 3 | Adjusts display contrast |
 
 ---
 
