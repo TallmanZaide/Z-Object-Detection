@@ -14,11 +14,21 @@ This system automates obstacle detection using a scanning ultrasonic sensor asse
 
 ### System Setup
 <!-- Upload your image to the repo and reference it here -->
-![System Prototype Layout](path-to-your-image.jpg)
+<img width="2160" height="2880" alt="Object detecor IMG 1" src="https://github.com/user-attachments/assets/8b6c6af5-40ec-48b5-83f6-64a64671de8d" />
+
+### System Startup
+<img width="2363" height="1466" alt="Object detector IMG 2" src="https://github.com/user-attachments/assets/24e6ce4a-1bac-405f-ab7a-87c3ab9d0986" />
+
 
 ### Working Video Demo
 <!-- Drag and drop your mp4 video directly into GitHub's text editor here to render a video player -->
-[Watch the system operation demo video](path-to-your-video.mp4)
+
+
+https://github.com/user-attachments/assets/d8ce2b78-300a-41b7-8098-e8868047e46a
+
+
+
+
 
 ---
 
@@ -34,7 +44,7 @@ This system automates obstacle detection using a scanning ultrasonic sensor asse
 
 ### Tinkercad Circuit Diagram
 <!-- Export your diagram from Tinkercad, upload it to your repo, and reference it below -->
-![Tinkercad Electrical Diagram]
+
 <img width="917" height="572" alt="image" src="https://github.com/user-attachments/assets/d7112d4d-9116-431b-bf4a-accbc07a43d3" />
 
 
