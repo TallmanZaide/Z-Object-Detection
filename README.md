@@ -6,7 +6,9 @@ This project uses a microcontroller that detects objects while the system scans 
 
 Key Feature:
 Real-Time detection: Continously monitors the area using sensors
+
 Alerting system: A Visual message on the LCD 
+
 Distance calculator: The sensor detects how far the object is and outputs it on the LCD screen
 
 BOM
