@@ -62,7 +62,25 @@ https://github.com/user-attachments/assets/d8ce2b78-300a-41b7-8098-e8868047e46a
 * M-M / M-F Jumpers Wires
 
 ---
+## Engineering Challenges & Troubleshooting
 
+### 1. Sensor Reading Anomalies (Ultrasonic Near-Field Spikes)
+* **The Challenge:** The HC-SR04 sonar sensor produced intermittent, highly inaccurate distance spikes (e.g., reading 30 cm when an object was directly in front of the sensor's face). This was caused by acoustic multi-path reflections and minimum-range blind spots inherent to low-cost ultrasonic transducers.
+* **The Solution:** Implemented software filtering and boundary validation thresholds within the firmware loop to discard anomalous data spikes outside of physically plausible delta ranges.
+
+### 2. Servo Motor Actuation Jitter
+* **The Challenge:** When an object was detected, the SG90 micro servo exhibited severe physical jittering rather than a clean, precise hold. This was caused by conflicting loop execution timings and rapid state switching between the sweep function and the detection interrupt logic.
+* **The Solution:** Refactored the core state machine code architecture. Separated the scanning routine from the measurement/alert cycle using non-blocking timing flags rather than rigid delays, stabilizing the PWM signaling sent to the servo motor.
+
+### 3. Display Calibration & Visibility Bugs
+* **The Challenge:** During initial hardware assembly, the 16x2 LCD screen was completely unreadable due to a severely dim backlight and flat pixel contrast profiles.
+* **The Solution:** Diagnosed and corrected current-limiting power distribution layouts and manually tuned the analog voltage divider network utilizing a 10k-ohm potentiometer to lock in stable pixel visibility profiles.
+
+---
+
+## Future System Improvements
+* Add analog joystick support to manually aim the sensor sweep.
+* Display real-time target metrics (distance and angle position) directly on the LCD display.
 ## Getting Started for Collaborators
 
 1. Clone this repository locally.
