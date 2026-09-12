@@ -34,7 +34,9 @@ This system automates obstacle detection using a scanning ultrasonic sensor asse
 
 ### Tinkercad Circuit Diagram
 <!-- Export your diagram from Tinkercad, upload it to your repo, and reference it below -->
-![Tinkercad Electrical Diagram](circuit-diagram.png)
+![Tinkercad Electrical Diagram]
+<img width="917" height="572" alt="image" src="https://github.com/user-attachments/assets/d7112d4d-9116-431b-bf4a-accbc07a43d3" />
+
 
 ### Hardware Pin Matrix
 To replicate or modify this project, connect the components to your microcontroller board according to the mapping matrix below:
