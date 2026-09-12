@@ -25,3 +25,5 @@ BOM
 -Servo sg90
 
 Video of it working is in the file
+<img width="2160" height="2880" alt="Object detecor IMG 1" src="https://github.com/user-attachments/assets/c6c1b51d-562c-4463-929d-367c917cff2d" />
+<img width="2363" height="1466" alt="Object detector IMG 2" src="https://github.com/user-attachments/assets/d87c6d02-6d6b-4a57-bf86-38aecedcb6cd" />
