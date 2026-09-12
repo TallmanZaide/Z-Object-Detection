@@ -13,10 +13,15 @@ Alerting system: A Visual message on the LCD
 Distance calculator: The sensor detects how far the object is and outputs it on the LCD screen
 
 BOM
+
 -Eleggo Uno R3
+
 -HC-SR04 (Ultrasonic Sonar Sensor)
+
 -Breadboard
+
 -Potentiomete
+
 -Servo sg90
 
 Video of it working is in the file
