@@ -1,0 +1,93 @@
+#include <LiquidCrystal.h>
+#include <Servo.h>
+
+LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+Servo myServo;
+
+const int servoPin = 3;
+const int trigPin = 5;
+const int echoPin = 6;
+
+int angle = 90;
+int dir = 1; // 1 = forward, -1 = backward
+int maxDist = 40; // max distance to trigger alarm (in cm)
+
+bool wasTriggered = false; 
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.print("Sentry System");
+  lcd.setCursor(0, 1);
+  lcd.print("Online...");
+  delay(1500);
+  lcd.clear();
+  
+  myServo.attach(servoPin);
+  myServo.write(angle);
+  
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  float d = readDistance();
+  
+  // check if something is in range
+  if (d > 2 && d < maxDist) {
+    wasTriggered = true; 
+    
+    lcd.setCursor(0, 0);
+    lcd.print("OBJECT DETECTED ");
+    lcd.setCursor(0, 1);
+    lcd.print("Distance: ");
+    lcd.print(d, 1);
+    lcd.print("cm   "); 
+    
+    delay(50); 
+  } 
+  else {
+    // if object just left, show thank you screen
+    if (wasTriggered) {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("   THANK YOU    ");
+      lcd.setCursor(0, 1);
+      lcd.print("RESUMING SCAN...");
+      delay(1500); 
+      lcd.clear();
+      wasTriggered = false; 
+    }
+
+    // regular scanning mode
+    lcd.setCursor(0, 0);
+    lcd.print("SCANNING AREA... ");
+    lcd.setCursor(0, 1);
+    lcd.print("STATUS: SECURE   ");
+    
+    angle += dir * 3; 
+    
+    // bounce back at limits
+    if (angle >= 165 || angle <= 15) {
+      dir *= -1; 
+    }
+    
+    myServo.write(angle);
+    delay(40); 
+  }
+}
+
+// function to get distance from sensor
+float readDistance() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  long duration = pulseIn(echoPin, HIGH, 25000); 
+  if (duration == 0) {
+    return 999; 
+  }
+  
+  return (duration * 0.0343) / 2.0; 
+}
