@@ -30,8 +30,13 @@ This system automates obstacle detection using a scanning ultrasonic sensor asse
 
 ---
 
-## System Architecture and Pin Mapping
+## Electrical Schematic and Pin Mapping
 
+### Tinkercad Circuit Diagram
+<!-- Export your diagram from Tinkercad, upload it to your repo, and reference it below -->
+![Tinkercad Electrical Diagram](circuit-diagram.png)
+
+### Hardware Pin Matrix
 To replicate or modify this project, connect the components to your microcontroller board according to the mapping matrix below:
 
 | Component | Component Pin | Arduino Uno Pin | Notes |
